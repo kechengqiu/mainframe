@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>My Form</title>
+
+	<script>
+	
+		function saveWithAJAX() {
+			var comment   = document.getElementById("txtComment").value;
+			
+			var x;
+			
+			x = new XMLHttpRequest();
+			
+			x.onreadystatechange = function() {
+				if ( x.readyState == 4 && x.status == 200 ) {
+					document.getElementById("results_block").innerHTML = x.responseText;
+				}	
+			
+			};
+			
+			x.open( "GET", "save.php?txtComment=" + comment, true );
+			
+			
+			x.send();
+			
+		}
+	
+	</script>
+
+
+	<style type="text/css">
+		
+		#form_block {
+			width: 80%;
+			background-color:  rgb(221, 255, 221);
+			border:  1px solid rgb(0, 164, 0);
+			
+			padding: 10px;
+			
+			margin: 0 auto;
+			margin-bottom: 30px;
+		}
+		
+		#results_block {
+		
+			width: 80%;
+			/*background-color:  rgb(221, 255, 221);*/
+			border:  1px solid rgb(150, 150, 150);
+			
+			padding: 10px;
+			
+			margin: 0 auto;
+			
+			
+		}
+		
+	</style>
+
+
+</head>
+<body>
+
+	<div id="form_block">
+		<form method="get" action="./save.php">
+		
+			Name:<br/>
+ 		 <textarea name='txtComment' id='txtComment'></textarea><br />
+						
+			<input type="button" value="Save with AJAX" onclick="saveWithAJAX()" />
+		
+		</form>
+	</div>
+	
+	<div id="results_block">&nbsp;</div>
+
+</body>
+</html>

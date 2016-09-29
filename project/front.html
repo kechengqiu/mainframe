@@ -1,0 +1,147 @@
+<html>
+<head>
+<title>UAtweetBook</title>
+
+	<style type="text/css">
+	
+		body {
+			margin: 0;
+		}
+		
+		#header {
+			width: 100%;
+			border: 0px solid black;
+			height: 50px;
+			background-color: rgb(102,153,204);
+		}
+		
+		#header_2 {
+			width: 100%;
+			border: 0px;
+			height: 400px;
+		}
+		
+		#header_2_middle {
+			margin: auto;
+			width: 850px;
+			border: 1px;
+			height: 400px;
+		}
+		
+		#header_left {
+			width: 60%;
+			height: 100%;
+			float: left;
+			padding: 10px;
+			
+		}
+		
+		#header_right {
+			width: 35%;
+			height: 100%;
+			float: right;
+			padding: 10px;
+		}
+		
+		
+		#content_1 {
+			width: 100%;
+			height: 70px;
+			padding: 10px;
+			border: 1px solid lightblue;
+			border-radius: 5px;
+		}
+		
+		#content_2 {
+			width: 100%;
+			height: 200px;
+			padding: 10px;
+			border: 1px solid lightblue;
+			border-radius: 5px;
+		}
+		
+		#logo_1 {
+			width: 80%;
+			height: 100%;
+			margin: auto;
+		}
+		
+		#logo_2 {
+			width: 50px;
+			height: 100%;
+			float: left;
+		}
+		
+		#logo_3 {
+			width: 250px;
+			height: 100%;
+			float: left;
+			padding: 5px;
+		}
+		
+		p {
+			font-size: 20px;
+		}
+		
+		
+		hr {
+			border: 1px solid lightblue;
+		}
+		
+		
+	</style>
+
+</head>
+<body>
+		<div id="header">	
+			<div id="logo_1">
+	            <div id="logo_2">
+	            	<a href="./front.html"><img src="I38tN1dN.png" style="width:50px;height:50px;"></a>
+	            </div>  
+	            <div id="logo_3">
+	            	<p style="color: darkblue;">UAtweetBook</p>
+	            </div>
+            </div>
+		</div>
+		&nbsp;
+		<div id="header_2">
+        	<div id="header_2_middle">
+                <div id="header_left">
+                    <h1>Welcome to UAtweetBook! </h1><br/>
+                    Connect with friends...... <br/>
+					
+                </div>
+                
+                <div id="header_right">
+                    <div id="content_1">
+                        
+                        <form action="./logincheck.php" method="POST">
+                            <input type="text" name="txtUsername" size="35" placeholder="Username"/> <br/><br/>
+                            <input type="password" name="txtPassword" size="25" placeholder="Password" />&nbsp;
+                            <input type="submit" value="Log in" /> 
+                        </form>
+                    </div>
+                  &nbsp;
+                    <div id="content_2">
+                        <b>New to UAtweetBook?</b> Sign up now<br/>
+                        <hr>
+                        <form action="./register.php" method="POST">
+                            <input type="text" name="txtFirstname" size="15" placeholder="First Name" required/> &nbsp;
+                            <input type="text" name="txtLastname" size="15" placeholder="Last Name"/> <br/><br/>
+                            <input type="text" name="txtEmail" size="35" placeholder="Email"/> <br/> <br/>
+                            <input type="text" name="txtUsername" size="35" placeholder="Username"/> <br/> <br/>
+                            <input type="password" name="txtPassword" size="24" placeholder="Password"/> &nbsp;
+                            <input type="submit" value="Sign up" /><br/>
+                        </form>
+                        
+                        Need if statement to let you know that registration failed if 1 field is not entered.
+                        
+                    </div> 
+                </div>
+            </div>
+		</div>
+
+			
+
+</body>
+</html>
